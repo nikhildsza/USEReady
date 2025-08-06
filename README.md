@@ -59,7 +59,7 @@ Builds an AI system to extract metadata from `.docx`, `.pdf`, and `.png` scanned
 ### 1️⃣ Clone the Repo
 
 ```bash
-git clone https://github.com/<your-username>/USEReady.git
+git clone https://github.com/nikhildsza/USEReady.git
 cd USEReady
 ```
 
