@@ -24,11 +24,10 @@ This repository contains the solutions to two assignments:
 
 A classification problem where the goal is to predict the `Load_Type` based on other features like `Usage_kWh` and time-based patterns.
 
-### 🛠️ ML Models Used
+### 💠 ML Models Used
 - Random Forest (Best performer)
 - Decision Tree
 - Naive Bayes
-- K-Nearest Neighbors (KNN)
 
 ### 📈 Evaluation Metric
 - Accuracy
@@ -62,3 +61,91 @@ Builds an AI system to extract metadata from `.docx`, `.pdf`, and `.png` scanned
 ```bash
 git clone https://github.com/<your-username>/USEReady.git
 cd USEReady
+```
+
+### 2️⃣ Create and Activate a Virtual Environment
+
+```bash
+python -m venv env
+source env/bin/activate    # For Linux/macOS
+env\Scripts\activate.bat   # For Windows
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Set Up Gemini API Key
+
+Create a `.env` file in the `backend/` folder and add:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+Get the key from: https://makersuite.google.com/app/apikey
+
+---
+
+## 🚀 Running the Project
+
+### ✅ Start FastAPI Backend (Assignment 2)
+
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+> This exposes the API at: `http://localhost:8000/extract`
+
+### ✅ Start Streamlit Frontend
+
+Open a new terminal:
+
+```bash
+cd frontend
+streamlit run app.py
+```
+
+> This opens a UI in your browser to upload documents and view metadata.
+
+---
+
+## 📈 Evaluation (Assignment 2)
+
+The API also supports evaluating per-field recall based on `test.csv`:
+
+```bash
+GET http://localhost:8000/evaluate
+```
+
+This returns recall scores for each metadata field.
+
+---
+
+## 🧠 Notes
+
+- No RegEx or rule-based logic used — only LLM-powered structured extraction
+- Supports `.docx`, `.pdf`, `.png`, `.jpg` via LangChain + Tesseract OCR + Gemini
+- Evaluation based on **per-field recall**, as mentioned in the assignment
+
+---
+
+## 🛠️ Tools & Libraries
+
+- FastAPI
+- Streamlit
+- LangChain
+- Gemini 2.5 (Google Generative AI)
+- python-docx, PyMuPDF, pytesseract
+- scikit-learn, pandas, matplotlib (Assignment 1)
+
+---
+
+## 🤝 Acknowledgments
+
+Submitted as part of USEReady assignments.
+
+---
