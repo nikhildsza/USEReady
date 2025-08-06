@@ -1,0 +1,14 @@
+ipykernel
+pandas 
+seaborn 
+matplotlib 
+scikit-learn
+fastapi
+uvicorn
+python-docx
+dotenv
+pytesseract
+langchain_google_genai
+langchain
+python-multipart
+streamlit
