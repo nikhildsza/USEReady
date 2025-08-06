@@ -113,18 +113,6 @@ streamlit run app.py
 
 ---
 
-## 📈 Evaluation (Assignment 2)
-
-The API also supports evaluating per-field recall based on `test.csv`:
-
-```bash
-GET http://localhost:8000/evaluate
-```
-
-This returns recall scores for each metadata field.
-
----
-
 ## 🧠 Notes
 
 - No RegEx or rule-based logic used — only LLM-powered structured extraction
